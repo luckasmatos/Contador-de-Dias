@@ -1,22 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-  <title>Somar Dias com Data</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="./assets/calendar.png" type="image/x-icon">
+  <title>Calculadora de Datas</title>
 </head>
+
 <body>
-  <h1>Somar Dias com Data</h1>
 
-  <label for="inputData">Insira uma data:</label>
-  <input type="date" id="inputData">
+  <main id="container">
 
-  <label for="inputDias">Selecione um número de dias:</label>
-  <input type="number" id="inputDias" min="1" step="1">
+    <img src="./assets/Calendar-icon.png" alt="Calendar icon" id="logoImage">
 
-  <button onclick="somarDias()">Somar Dias</button>
+    <h1>Calculadora de Datas</h1>
 
-  <h2>Resultado:</h2>
-  <div id="resultado"></div>
+    <div class="inputBox">
+      <label for="inputData">Insira uma data:</label>
+      <input type="date" id="inputData" class="input">
+    </div>
+
+    <div class="inputBox">
+      <label for="inputDias">Insira a quantidade de dias:</label>
+      <input type="number" id="inputDias" min="1" step="1" class="input" placeholder="0">
+    </div>
+
+    <div class="inputBox">
+      <label for="selectTipoDias">Selecione o tipo de dias:</label>
+      <select id="selectTipoDias" class="input">
+        <option value="corridos">Dias Corridos</option>
+        <option value="uteis">Dias Úteis</option>
+      </select>
+    </div>
+
+    <button onclick="somarDias()">Calcular</button>
+
+    <div id="resultado"></div>
+
+  </main>
 
   <script src="scripts.js"></script>
+
 </body>
+
 </html>
